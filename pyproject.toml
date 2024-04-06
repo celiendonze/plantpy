@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plantpy"
+description = "Python app for house plant management"
+authors = [{name = "Célien Donzé", email = "celien.donze@gmail.com"}]
+dynamic = [
+    "version",
+    "readme",
+]
+
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "sqlalchemy",
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "plantpy.__version__"}
+readme = {file = ["README.md"]}
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["E501", "S"]

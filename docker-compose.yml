@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/code/data
+    environment:
+      - TREFLE_API_KEY=your_trefle_api_key
+      - UID=1000
+      - GID=1000
