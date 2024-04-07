@@ -23,4 +23,4 @@ readme = {file = ["README.md"]}
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["E501", "S"]
+ignore = ["E501", "S", "D106"]

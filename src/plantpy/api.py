@@ -1,10 +1,12 @@
+"""API functions."""
+
+from plantpy.models import PlantDB, UserDB
 from plantpy.models.session import Session
-from plantpy.models import User, Plant
 
 
-def create_user(username: str, email: str, hashed_password: str) -> User:
+def create_user(username: str, email: str, hashed_password: str) -> UserDB:
     """Create a user."""
-    user = User(
+    user = UserDB(
         username=username,
         email=email,
         hashed_password=hashed_password,
@@ -16,9 +18,9 @@ def create_user(username: str, email: str, hashed_password: str) -> User:
     return user
 
 
-def create_plant(user: User, name: str) -> Plant:
+def create_plant(user: UserDB, name: str) -> PlantDB:
     """Create a plant."""
-    plant = Plant(
+    plant = PlantDB(
         user_id=user.id,
         name=name,
     )

@@ -1,6 +1,6 @@
 """All the models of the application."""
 
-from .plant import Plant
-from .user import User
+from .plant import Plant, PlantDB
+from .user import User, UserDB
 
-__all__ = ["Plant", "User"]
+__all__ = ["PlantDB", "UserDB", "Plant", "User"]
